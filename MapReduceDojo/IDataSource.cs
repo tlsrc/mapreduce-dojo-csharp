@@ -1,10 +1,11 @@
-using System.Collections;
+using System;
+using System.Collections.Generic;
 
 namespace MapReduceDojo
 {
     public interface IDataSource
     {
-        IEnumerator GetIterator();
+        IEnumerator<String> GetIterator();
         int Size();
     }
 }

@@ -42,13 +42,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Emitter.cs" />
+    <Compile Include="IEmitter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapperReducer.cs" />
+    <Compile Include="IMapperReducer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MapReduceJob.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="movie\Movie.cs" />
+    <Compile Include="movie\MovieDataSource.cs" />
+    <Compile Include="movie\MovieRatingByYear.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="wordcount\WordCount.cs" />
+    <Compile Include="wordcount\WordCountDataSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

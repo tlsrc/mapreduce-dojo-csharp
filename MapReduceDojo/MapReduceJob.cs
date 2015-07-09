@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MapReduceDojo.results;
 
 namespace MapReduceDojo
 {
@@ -10,12 +11,18 @@ namespace MapReduceDojo
         private Phase _phase;
         private readonly IMapperReducer<T> _mapperReducer;
 
-        private readonly IDictionary<String, T> _finalResults = new Dictionary<String, T>();
-        private readonly IDictionary<String, List<T>> _results = new Dictionary<String, List<T>>();
+        private readonly FinalResults<T> _finalResults;
+        private readonly IntermediateResults<T> _intermediateResults;
 
-        public MapReduceJob(IMapperReducer<T> mapperReducer, IDataSource dataSource)
+        public MapReduceJob(IMapperReducer<T> mapperReducer)
         {
+            _finalResults = new FinalResults<T>();
+            _intermediateResults = new IntermediateResults<T>();
             _mapperReducer = mapperReducer;
+        }
+
+        public void Run(IDataSource dataSource)
+        {
             Map(dataSource);
             Reduce();
             Print();
@@ -35,32 +42,21 @@ namespace MapReduceDojo
         private void Reduce()
         {
             _phase = Phase.Reduce;
-
-            foreach (KeyValuePair<String, List<T>> mapResult in _results)
-            {
-                _mapperReducer.Reduce(this, mapResult.Key, mapResult.Value);
-            }
+            _intermediateResults.Reduce(this, _mapperReducer);
         }
 
         public void Emit(String key, T value)
         {
             switch (_phase)
             {
-                case Phase.Map : AddResult(key, value); return;
-                case Phase.Reduce: _finalResults.Add(key, value); break;
+                case Phase.Map : _intermediateResults.Add(key, value); return;
+                case Phase.Reduce: _finalResults.Add(key, value); return;
             }
         }
 
-        public IDictionary<String, T> GetResults()
+        public T GetFinalResults(String key)
         {
-            return _finalResults;
-        }
-
-        private void AddResult(String key, T value)
-        {
-            List<T> values = _results[key] ?? new List<T>();
-            values.Add(value);
-            _results.Add(key, values);
+            return _finalResults.GetResultsFor(key);
         }
 
         private void Print()

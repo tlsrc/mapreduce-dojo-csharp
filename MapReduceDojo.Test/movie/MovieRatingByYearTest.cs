@@ -10,9 +10,10 @@ namespace MapReduceDojo.Test.movie
         public void ShouldFindHighestRatedMovieFor1994()
         {
             MovieDataSource dataSource = new MovieDataSource("movies.txt");
-            MapReduceJob<Movie> job = new MapReduceJob<Movie>(new MovieRatingByYear(), dataSource);
+            MapReduceJob<Movie> job = new MapReduceJob<Movie>(new MovieRatingByYear());
+            job.Run(dataSource);
 
-            Assert.AreEqual(job.GetResults()["1994"].Name, "The Shawshank Redemption");
+            Assert.AreEqual(job.GetFinalResults("1994").Name, "The Shawshank Redemption");
         }
 
 

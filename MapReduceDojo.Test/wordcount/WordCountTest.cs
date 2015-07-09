@@ -11,14 +11,15 @@ namespace MapReduceDojo.Test.wordcount
         public void ShouldCountWordsContainedInDataSource()
         {
             IDataSource dataSource = new WordCountDataSource();
+            MapReduceJob<Int32> job = new MapReduceJob<Int32>(new WordCount());
 
-            MapReduceJob<Int32> job = new MapReduceJob<Int32>(new WordCount(), dataSource);
+            job.Run(dataSource);
 
-            Assert.AreEqual(job.GetResults()["tom"], 2);
-            Assert.AreEqual(job.GetResults()["kim"], 2);
-            Assert.AreEqual(job.GetResults()["ian"], 2);
-            Assert.AreEqual(job.GetResults()["nancy"], 1);
-            Assert.AreEqual(job.GetResults()["bob"], 1);
+            Assert.AreEqual(job.GetFinalResults("tom"), 2);
+            Assert.AreEqual(job.GetFinalResults("kim"), 2);
+            Assert.AreEqual(job.GetFinalResults("ian"), 2);
+            Assert.AreEqual(job.GetFinalResults("nancy"), 1);
+            Assert.AreEqual(job.GetFinalResults("bob"), 1);
         }
 
 

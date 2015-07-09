@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapReduceDojo.Test", "MapReduceDojo.Test\MapReduceDojo.Test.csproj", "{005FB3C6-B8AA-4D67-A64A-E67907E69F31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapReduceDojo", "MapReduceDojo\MapReduceDojo.csproj", "{1605DFD0-30E9-49C1-A341-F0C9852B9456}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{005FB3C6-B8AA-4D67-A64A-E67907E69F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{005FB3C6-B8AA-4D67-A64A-E67907E69F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{005FB3C6-B8AA-4D67-A64A-E67907E69F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1605DFD0-30E9-49C1-A341-F0C9852B9456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1605DFD0-30E9-49C1-A341-F0C9852B9456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1605DFD0-30E9-49C1-A341-F0C9852B9456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1605DFD0-30E9-49C1-A341-F0C9852B9456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

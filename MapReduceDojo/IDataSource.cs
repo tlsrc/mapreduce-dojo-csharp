@@ -5,7 +5,7 @@ namespace MapReduceDojo
 {
     public interface IDataSource
     {
-        IEnumerator<String> GetIterator();
+        IEnumerator<String> GetEnumerator();
         int Size();
     }
 }

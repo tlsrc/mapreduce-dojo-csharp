@@ -13,7 +13,7 @@ namespace MapReduceDojo.movie
             _movies = File.ReadAllLines(fileName).ToList();
         }
 
-        public IEnumerator<String> GetIterator()
+        public IEnumerator<String> GetEnumerator()
         {
             return _movies.GetEnumerator();
         }

@@ -10,15 +10,14 @@ namespace MapReduceDojo.movie
         private readonly int _voteCount;
         private readonly int _releaseYear;
 
-        public Movie(String name,
-            float oneToTenRating,
-            int voteCount,
-            int releaseYear) {
+        public Movie(String name, float oneToTenRating,
+            int voteCount, int releaseYear)
+        {
             _name = name.Trim();
             _oneToTenRating = oneToTenRating;
             _voteCount = voteCount;
             _releaseYear = releaseYear;
-            }
+        }
 
         public string Name
         {

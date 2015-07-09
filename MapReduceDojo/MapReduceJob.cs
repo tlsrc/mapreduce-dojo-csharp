@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace MapReduceDojo
 {
-    public class MapReduceJob<T> : IEmitter<T> {
-
+    public class MapReduceJob<T> : IEmitter<T>
+    {
         private enum Phase {Map, Reduce}
 
         private Phase _phase;
@@ -25,7 +25,7 @@ namespace MapReduceDojo
         {
             _phase = Phase.Map;
 
-            IEnumerator<String> enumerator = dataSource.GetIterator();
+            IEnumerator<String> enumerator = dataSource.GetEnumerator();
             while(enumerator.MoveNext())
             {
                 _mapperReducer.Map(this, enumerator.Current);

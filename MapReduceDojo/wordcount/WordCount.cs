@@ -5,9 +5,10 @@ namespace MapReduceDojo.wordcount
 {
     public class WordCount : IMapperReducer<Int32> {
 
-        public void Map(IEmitter<Int32> emitter, String record) {
-
-            foreach (String word in record.Split(' ')) {
+        public void Map(IEmitter<Int32> emitter, String record)
+        {
+            foreach (String word in record.Split(' '))
+            {
                 // Count each word, emit a count of one
             }
         }

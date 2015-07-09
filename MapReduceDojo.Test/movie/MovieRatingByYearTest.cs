@@ -4,11 +4,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MapReduceDojo.Test.movie
 {
     [TestClass]
-    public class MovieRatingByYearTest {
-
+    public class MovieRatingByYearTest
+    {
         [TestMethod]
-        public void ShouldFindHighestRatedMovieFor1994() {
-
+        public void ShouldFindHighestRatedMovieFor1994()
+        {
             MovieDataSource dataSource = new MovieDataSource("movies.txt");
             MapReduceJob<Movie> job = new MapReduceJob<Movie>(new MovieRatingByYear(), dataSource);
 

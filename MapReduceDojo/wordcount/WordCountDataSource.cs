@@ -4,12 +4,12 @@ using System.Linq;
 
 namespace MapReduceDojo.wordcount
 {
-    public class WordCountDataSource : IDataSource {
-
+    public class WordCountDataSource : IDataSource
+    {
         private static readonly String[] DATA = { "tom kim ian", "nancy bob tom kim", "ian"};
 
-        public IEnumerator<String> GetIterator() {
-
+        public IEnumerator<String> GetEnumerator()
+        {
             return DATA.ToList().GetEnumerator();
         }
 

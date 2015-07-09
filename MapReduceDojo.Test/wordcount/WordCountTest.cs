@@ -1,5 +1,5 @@
 using System;
-using MapReduceDojo.wordcount;
+using MapReduceDojo.WordCount;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MapReduceDojo.Test.wordcount

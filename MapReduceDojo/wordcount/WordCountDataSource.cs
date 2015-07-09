@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MapReduceDojo.wordcount
+namespace MapReduceDojo.WordCount
 {
     public class WordCountDataSource : IDataSource
     {

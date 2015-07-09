@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="results\FinalResults.cs" />
-    <Compile Include="results\IntermediateResults.cs" />
+    <Compile Include="Results\FinalResults.cs" />
+    <Compile Include="Results\IntermediateResults.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,13 +56,13 @@
     <Compile Include="MapReduceJob.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="movie\Movie.cs" />
-    <Compile Include="movie\MovieDataSource.cs" />
-    <Compile Include="movie\MovieRatingByYear.cs" />
+    <Compile Include="Movie\Movie.cs" />
+    <Compile Include="Movie\MovieDataSource.cs" />
+    <Compile Include="Movie\MovieRatingByYear.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="wordcount\WordCount.cs" />
-    <Compile Include="wordcount\WordCountDataSource.cs" />
+    <Compile Include="WordCount\WordCount.cs" />
+    <Compile Include="WordCount\WordCountDataSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

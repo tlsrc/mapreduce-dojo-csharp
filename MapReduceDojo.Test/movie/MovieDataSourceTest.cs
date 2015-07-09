@@ -1,5 +1,5 @@
 using System.IO;
-using MapReduceDojo.movie;
+using MapReduceDojo.Movie;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MapReduceDojo.Test.movie

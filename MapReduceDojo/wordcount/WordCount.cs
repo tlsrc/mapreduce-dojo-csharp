@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MapReduceDojo.wordcount
+namespace MapReduceDojo.WordCount
 {
     public class WordCount : IMapperReducer<Int32> {
 

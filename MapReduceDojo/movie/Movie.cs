@@ -1,6 +1,6 @@
 using System;
 
-namespace MapReduceDojo.movie
+namespace MapReduceDojo.Movie
 {
     public class Movie
     {

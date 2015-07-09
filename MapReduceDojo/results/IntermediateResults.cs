@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MapReduceDojo.results
+namespace MapReduceDojo.Results
 {
     public class IntermediateResults<T>
     {

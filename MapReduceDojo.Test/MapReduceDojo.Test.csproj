@@ -58,6 +58,14 @@
       <Name>MapReduceDojo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="movie\MovieDataSourceTest.cs" />
+    <Compile Include="movie\MovieRatingByYearTest.cs" />
+    <Compile Include="wordcount\WordCountTest.cs" />
+    <Content Include="movie\movies.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

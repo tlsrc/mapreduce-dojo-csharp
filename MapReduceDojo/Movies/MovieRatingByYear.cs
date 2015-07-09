@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MapReduceDojo.movie
+namespace MapReduceDojo.Movies
 {
     public class MovieRatingByYear : IMapperReducer<Movie> {
 

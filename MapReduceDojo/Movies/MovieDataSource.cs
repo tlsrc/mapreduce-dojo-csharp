@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace MapReduceDojo.movie
+namespace MapReduceDojo.Movies
 {
     public class MovieDataSource : IDataSource {
         private readonly List<String> _movies;

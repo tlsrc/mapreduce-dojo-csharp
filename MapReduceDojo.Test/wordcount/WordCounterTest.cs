@@ -5,13 +5,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MapReduceDojo.Test.wordcount
 {
     [TestClass]
-    public class WordCountTest
+    public class WordCounterTest
     {
         [TestMethod]
         public void ShouldCountWordsContainedInDataSource()
         {
             IDataSource dataSource = new WordCountDataSource();
-            MapReduceJob<Int32> job = new MapReduceJob<Int32>(new WordCount());
+            MapReduceJob<Int32> job = new MapReduceJob<Int32>(new WordCounter());
 
             job.Run(dataSource);
 

@@ -1,4 +1,4 @@
-using MapReduceDojo.Movie;
+using MapReduceDojo.Movies;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MapReduceDojo.Test.movie

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MapReduceDojo.WordCount
 {
-    public class WordCount : IMapperReducer<Int32> {
+    public class WordCounter : IMapperReducer<Int32> {
 
         public void Map(IEmitter<Int32> emitter, String record)
         {
@@ -13,7 +13,8 @@ namespace MapReduceDojo.WordCount
             }
         }
 
-        public void Reduce(IEmitter<Int32> emitter, String key, List<Int32> values) {
+        public void Reduce(IEmitter<Int32> emitter, String key, List<Int32> values)
+        {
             Int32 total = 0;
             // Reduce all the values to a total for the key
             emitter.Emit(key, total);

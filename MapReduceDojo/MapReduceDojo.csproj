@@ -56,12 +56,12 @@
     <Compile Include="MapReduceJob.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Movie\Movie.cs" />
-    <Compile Include="Movie\MovieDataSource.cs" />
-    <Compile Include="Movie\MovieRatingByYear.cs" />
+    <Compile Include="Movies\Movie.cs" />
+    <Compile Include="Movies\MovieDataSource.cs" />
+    <Compile Include="Movies\MovieRatingByYear.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WordCount\WordCount.cs" />
+    <Compile Include="WordCount\WordCounter.cs" />
     <Compile Include="WordCount\WordCountDataSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

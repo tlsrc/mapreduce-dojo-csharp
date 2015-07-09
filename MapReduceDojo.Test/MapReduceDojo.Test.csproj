@@ -59,10 +59,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="movie\MovieDataSourceTest.cs" />
-    <Compile Include="movie\MovieRatingByYearTest.cs" />
-    <Compile Include="wordcount\WordCountTest.cs" />
-    <Content Include="movie\movies.txt">
+    <Compile Include="Movie\MovieDataSourceTest.cs" />
+    <Compile Include="Movie\MovieRatingByYearTest.cs" />
+    <Compile Include="WordCount\WordCounterTest.cs" />
+    <Content Include="Movie\movies.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

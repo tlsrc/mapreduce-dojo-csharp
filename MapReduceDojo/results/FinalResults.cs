@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MapReduceDojo.results
+namespace MapReduceDojo.Results
 {
     public class FinalResults<T>
     {

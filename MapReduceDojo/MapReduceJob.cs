@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using MapReduceDojo.results;
+using MapReduceDojo.Results;
 
 namespace MapReduceDojo
 {
